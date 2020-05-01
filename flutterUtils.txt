@@ -1,0 +1,22 @@
+keytool -list -v -alias androiddebugkey -keystore C:\Users\bruno\.android\debug.keystore
+
+keytool -list -v -alias androiddebugkey -keystore 
+
+keytool -exportcert -list -v alias androiddebugkey -keystore C:\Users\bruno\.android\debug.keystore
+
+#### Generate Key       
+keytool -exportcert -alias sesamo -keystore C:\Users\bruno\.android\debug.keystore | openssl sha1 -binary | openssl base64
+
+
+C:\Users\bruno\AndroidStudioProjects\sesamo>keytool -exportcert -alias sesamo -keystore C:\Users\bruno\.android\debug.keystore | openssl sha1 -binary
+ | openssl base64
+
+#### Model Facebook Key
+Informe a senha da área de armazenamento de chaves:  sesamo2018
++F7e0vDnxU8H4co9SGbWQVmkNKY=
+
+
+########## Add icon by command
+$ flutter pub get
+
+$ flutter pub pub run flutter_launcher_icons:main
