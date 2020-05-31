@@ -8,8 +8,7 @@ keytool -exportcert -list -v alias androiddebugkey -keystore C:\Users\bruno\.and
 keytool -exportcert -alias sesamo -keystore C:\Users\bruno\.android\debug.keystore | openssl sha1 -binary | openssl base64
 
 
-C:\Users\bruno\AndroidStudioProjects\sesamo>keytool -exportcert -alias sesamo -keystore C:\Users\bruno\.android\debug.keystore | openssl sha1 -binary
- | openssl base64
+keytool -exportcert -alias vocemonitorapoa -keystore C:\Users\bruno\.android\debug.keystore | openssl sha1 -binary | openssl base64
 
 #### Model Facebook Key
 Informe a senha da área de armazenamento de chaves:  sesamo2018
@@ -20,3 +19,27 @@ Informe a senha da área de armazenamento de chaves:  sesamo2018
 $ flutter pub get
 
 $ flutter pub pub run flutter_launcher_icons:main
+
+#### Force update and rebuild
+flutter upgrade --force
+
+
+############# Stable Sdk
+flutter channel stable
+
+####### Verify Repositories
+flutter analyze --flutter-repo
+
+##### Facebook Key
+keytool -exportcert -alias androiddebugkey -keystore "C:\Users\USERNAME\.android\debug.keystore" | "PATH_TO_OPENSSL_LIBRARY\bin\openssl" sha1 -binary | "PATH_TO_OPENSSL_LIBRARY\bin\openssl" base64
+
+keytool -exportcert -alias androiddebugkey -keystore "C:\Users\bruno\.android\debug.keystore" | openssl sha1 -binary | openssl base64
+
+########## Update Packages
+flutter packages get
+
+########## Buldi version
+flutter build apk –build-name=3.0.0 –build-number=3
+
+##### Adicionar icone
+flutter pub pub run flutter_launcher_icons:main
