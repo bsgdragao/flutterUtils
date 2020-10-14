@@ -7,6 +7,8 @@ keytool -exportcert -list -v alias androiddebugkey -keystore C:\Users\bruno\.and
 #### Generate Key       
 keytool -exportcert -alias sesamo -keystore C:\Users\bruno\.android\debug.keystore | openssl sha1 -binary | openssl base64
 
+keytool -exportcert -alias gate-cult -keystore "C:\Users\bruno\.android\debug.keystore" | "C:\Program Files\OpenSSL-Win64\bin\openssl" sha1 -binary | "C:\Program Files\OpenSSL-Win64\bin\openssl" base64
+
 
 keytool -exportcert -alias vocemonitorapoa -keystore C:\Users\bruno\.android\debug.keystore | openssl sha1 -binary | openssl base64
 
