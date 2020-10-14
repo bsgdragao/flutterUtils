@@ -42,7 +42,7 @@ flutter packages get
 flutter build apk –build-name=3.0.0 –build-number=3
 
 ##### Adicionar icone
-flutter pub pub run flutter_launcher_icons:main
+flutter pub run flutter_launcher_icons:main
 
 ######### Build App
 $ flutter build ios
